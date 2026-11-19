@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI Platinum Roadmap &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies: roadmap to the platinum, missable flags, cited guides, progress saved in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-text">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="sub">Roadmap to the platinum, every trophy with a cited guide, and a tracker that saves your progress in the browser. Works fully offline — no account, no network.</p>
+  </div>
+  <div class="progress-card" id="progressCard">
+    <div class="ring" id="ring"><span id="ringText">0%</span></div>
+    <p class="big" id="progressText">0 of 55 earned</p>
+    <p class="small" id="gradeText">0 platinum &middot; 0 gold &middot; 0 silver &middot; 0 bronze</p>
+    <div class="bar"><div id="barFill"></div></div>
+  </div>
+</header>
+
+<section class="roadmap" id="roadmap">
+  <h2>Roadmap to the platinum</h2>
+  <p class="section-note">Play it in this order. Story trophies cannot be missed — finish the story and they unlock. The 9 missable flags below are one-time moments or fail conditions: replay the mission from the pause menu if you pass one.</p>
+  <ol class="stages" id="stages"></ol>
+</section>
+
+<section class="missables">
+  <h2>Missable trophies — 9 to watch</h2>
+  <p class="section-note">Each of these is tied to a one-time moment or a condition that can fail. Everything else can be earned at any time.</p>
+  <ul class="missable-list" id="missableList"></ul>
+</section>
+
+<div class="controls" id="controls">
+  <input id="search" type="search" placeholder="Search a trophy, mission or activity…" aria-label="Search trophies">
+  <div class="chips" id="kindChips" role="group" aria-label="Filter by kind">
+    <button type="button" data-kind="all" class="chip active">All 55</button>
+    <button type="button" data-kind="story" class="chip">Story</button>
+    <button type="button" data-kind="missable" class="chip">Missable</button>
+    <button type="button" data-kind="collectibles" class="chip">Collectibles</button>
+    <button type="button" data-kind="activities" class="chip">Activities</button>
+    <button type="button" data-kind="online" class="chip">Online</button>
+  </div>
+  <label class="ctl">Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="ctl check"><input type="checkbox" id="hideEarned"> Hide earned</label>
+  <label class="ctl check"><input type="checkbox" id="spoiler"> Spoiler-free mode</label>
+  <button id="export" type="button">Export progress</button>
+  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+</div>
+
+<p class="count" id="count"></p>
+<main>
+  <ul class="trophies" id="rows"></ul>
+  <p class="empty" id="empty" hidden>No trophies match these filters. Try clearing the search or picking another kind.</p>
+</main>
+
+<aside class="detail" id="detail" hidden>
+  <button type="button" class="close" id="closeDetail" aria-label="Close guide">&times;</button>
+  <p class="grade-badge" id="detailGrade"></p>
+  <h2 id="detailName"></h2>
+  <p class="desc" id="detailDesc"></p>
+  <p class="tags" id="detailTags"></p>
+  <h3>Guide</h3>
+  <p id="detailGuide"></p>
+  <h3>Source</h3>
+  <p class="source" id="detailSource"></p>
+  <label class="ctl check big"><input type="checkbox" id="detailEarned"> Mark as earned</label>
+</aside>
+
+<footer>
+  <h2>Sources</h2>
+  <ul>
+    <li>Official trophy names, descriptions and grades: PlayStation, as listed by Exophase and PSNProfiles before this bounty opened (the two agree on every name, description and grade).</li>
+    <li>Requirements and counts: the official trophy descriptions themselves, plus the in-game Challenges, Activities and collection menus they point to.</li>
+    <li>Every guide above is original writing for this entry — drawn from the official descriptions, never copied from another guide.</li>
+  </ul>
+  <p class="fine">Unofficial fan guide. Not affiliated with, endorsed by or connected to Rockstar Games or PlayStation. GTA VI and Grand Theft Auto are trademarks of their owners. This guide shows no Rockstar logo or official artwork.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
